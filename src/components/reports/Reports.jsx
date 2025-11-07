@@ -1,6 +1,7 @@
 import { Box, Button, ButtonGroup, MenuItem, Select } from "@mui/material"
 import { useEffect, useState } from "react"
 import { getAllOrders } from "../../services/orders/ordersServices.js";
+import { getReportValues } from "../../services/reports/reportServices.js";
 
 export const Reports = () => {
     const currentYear = new Date().getFullYear();
@@ -9,6 +10,7 @@ export const Reports = () => {
     const [selectedMonth, setSelectedMonth] = useState(currentMonthIndex);
     const [allOrders, setAllOrders] = useState([])
     const [reportOrders, setReportOrders] = useState([])
+    const [reportValues, setReportValues] = useState({ numOrders: 0, sumOrders: 0.00, avgOrders: 0.00})
 
 
     useEffect(() => {
@@ -19,13 +21,15 @@ export const Reports = () => {
 
     useEffect(() => {
         const filteredOrders = allOrders.filter(order => {
-            const d = newDate(order.date)
+            const d = new Date(order.date)
             return (
                 d.getFullYear() === selectedYear &&
                 d.getMonth() === selectedMonth
             );
         })
+        setReportValues(getReportValues(filteredOrders))
         setReportOrders(filteredOrders)
+        
     }, [selectedMonth, selectedYear, allOrders])
 
     const months = [
@@ -51,6 +55,7 @@ export const Reports = () => {
     years.reverse()
 
     return (
+        <>
         <Box sx={{display: "flex", justifyContent: "center", marginTop: "1rem"}}>
             <Box sx={{ display: "flex", gap: 2, alignItems: "center", flexWrap: "wrap" }}>
                 <Select
@@ -74,5 +79,11 @@ export const Reports = () => {
                 </ButtonGroup>
             </Box>
         </Box>
+        <Box sx={{justifyContent: "center"}}>
+                    <p>Total orders: {reportValues.numOrders}</p>
+                    <p>Total sales: ${reportValues.sumOrders}</p>
+                    <p>Average order value: ${reportValues.avgOrders} </p>
+        </Box>
+        </>
     );
 }
