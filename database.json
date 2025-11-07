@@ -1,0 +1,69 @@
+{
+    "orders": [
+        {
+            "id": 1,
+            "userId": 101,
+            "driverId": null,
+            "tableId": 12,
+            "date": "2025-11-01T18:30:00.000Z",
+            "customerName": "Alice Johnson",
+            "customerAddress": "123 Main St",
+            "phoneNumber": "555-1234",
+            "tip": 5.00,
+            "total": 32.50,
+            "status": "placed"
+        },
+        {
+            "id": 2,
+            "userId": 102,
+            "driverId": 201,
+            "tableId": null,
+            "date": "2025-11-02T19:15:00.000Z",
+            "customerName": "Bob Smith",
+            "customerAddress": "456 Oak Ave",
+            "phoneNumber": "555-5678",
+            "tip": 3.50,
+            "total": 24.00,
+            "status": "in oven"
+        },
+        {
+            "id": 3,
+            "userId": 103,
+            "driverId": 202,
+            "tableId": null,
+            "date": "2025-11-03T20:00:00.000Z",
+            "customerName": "Carol Lee",
+            "customerAddress": "789 Pine Rd",
+            "phoneNumber": "555-9012",
+            "tip": 4.25,
+            "total": 28.75,
+            "status": "out for delivery"
+        },
+        {
+            "id": 4,
+            "userId": 104,
+            "driverId": null,
+            "tableId": 15,
+            "date": "2025-11-04T17:45:00.000Z",
+            "customerName": "David Kim",
+            "customerAddress": "321 Maple St",
+            "phoneNumber": "555-3456",
+            "tip": 6.00,
+            "total": 40.00,
+            "status": "complete"
+        },
+        {
+            "id": 5,
+            "userId": 105,
+            "driverId": 203,
+            "tableId": null,
+            "date": "2025-10-30T21:10:00.000Z",
+            "customerName": "Eve Martinez",
+            "customerAddress": "654 Cedar Blvd",
+            "phoneNumber": "555-7890",
+            "tip": 2.75,
+            "total": 22.00,
+            "status": "placed"
+        }
+    ]
+}

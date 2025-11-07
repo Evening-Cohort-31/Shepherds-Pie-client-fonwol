@@ -1,11 +1,32 @@
 import { Box, Button, ButtonGroup, MenuItem, Select } from "@mui/material"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { getAllOrders } from "../../services/orders/ordersServices.js";
 
 export const Reports = () => {
     const currentYear = new Date().getFullYear();
     const currentMonthIndex = new Date().getMonth();
     const [selectedYear, setSelectedYear] = useState(currentYear);
     const [selectedMonth, setSelectedMonth] = useState(currentMonthIndex);
+    const [allOrders, setAllOrders] = useState([])
+    const [reportOrders, setReportOrders] = useState([])
+
+
+    useEffect(() => {
+        getAllOrders().then(res => {
+            setAllOrders(res)
+        })
+    }, [])
+
+    useEffect(() => {
+        const filteredOrders = allOrders.filter(order => {
+            const d = newDate(order.date)
+            return (
+                d.getFullYear() === selectedYear &&
+                d.getMonth() === selectedMonth
+            );
+        })
+        setReportOrders(filteredOrders)
+    }, [selectedMonth, selectedYear, allOrders])
 
     const months = [
         "January",
