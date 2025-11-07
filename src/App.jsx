@@ -11,15 +11,16 @@ function App() {
           path="/"
           element={
             <>
-              <Navbar/>
+              <Navbar />
               <Outlet />
-            </>}
+            </>
+          }
         >
-          <Route index element={<Home />}/>
+          <Route index element={<Home />} />
         </Route>
       </Routes>
     </>
-  )
+  );
 }
 
 export default App;
