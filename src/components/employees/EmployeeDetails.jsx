@@ -23,7 +23,7 @@ export const EmployeeDetails = () => {
 
         if (employee.name && employee.email && employee.phoneNumber && employee.address) {
         const editedEmployee = {
-            id: employee.id,
+            ... employee,
             name: employee.name,
             email: employee.email,
             phoneNumber: employee.phoneNumber,
