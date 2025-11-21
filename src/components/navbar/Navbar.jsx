@@ -11,7 +11,7 @@ import {
 import { useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
-  const pages = ["New Order", "View Orders", "Reports", "Employees"];
+  const pages = ["NewOrder", "View Orders", "Reports", "Employees"];
   const navigate = useNavigate();
 
   return (
@@ -42,7 +42,7 @@ export const Navbar = () => {
                   key={page}
                   sx={{ my: 2, color: "white", display: "block" }}
                   //Update as necessary
-                  onClick={() => navigate(`/${page}`)}
+                  onClick={() => navigate(`${page}`)}
                 >
                   {page}
                 </Button>

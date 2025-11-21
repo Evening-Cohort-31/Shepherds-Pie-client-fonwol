@@ -1,0 +1,548 @@
+/* Pizza Ordering App Styles */
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* App Container */
+.pizza-app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fef2f2 0%, #fed7aa 100%);
+  padding: 24px;
+}
+
+.pizza-app-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Header */
+.app-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.app-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #dc2626;
+  margin-bottom: 8px;
+}
+
+.app-subtitle {
+  color: #4b5563;
+  font-size: 18px;
+}
+
+/* Card Components */
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 24px;
+}
+
+.card-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.card-subtitle {
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.2s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  resize: vertical;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: #dc2626;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #b91c1c;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+.btn-secondary {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #2563eb;
+}
+
+.btn-outline {
+  background-color: white;
+  border: 2px solid #d1d5db;
+  color: #374151;
+}
+
+.btn-outline:hover:not(:disabled) {
+  background-color: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.btn-large {
+  padding: 16px 32px;
+  font-size: 18px;
+}
+
+.btn-icon {
+  padding: 12px;
+}
+
+/* Selection Buttons */
+.selection-grid {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.selection-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.selection-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.selection-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.selection-grid-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+@media (max-width: 768px) {
+  .selection-grid-3,
+  .selection-grid-4,
+  .selection-grid-5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.selection-btn {
+  padding: 16px;
+  border-radius: 8px;
+  border: 2px solid #d1d5db;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+  font-size: 15px;
+}
+
+.selection-btn:hover {
+  border-color: #fca5a5;
+  background-color: #fef2f2;
+}
+
+.selection-btn.active {
+  border-color: #dc2626;
+  background-color: #fef2f2;
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.selection-btn-title {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.selection-btn-detail {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.selection-btn.active .selection-btn-detail {
+  color: #dc2626;
+}
+
+/* Section Headers */
+.section-header {
+  font-size: 20px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 12px;
+}
+
+/* Customer Info Display */
+.customer-info {
+  background-color: #f9fafb;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.customer-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .customer-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.customer-info-item {
+  margin-bottom: 8px;
+}
+
+.customer-info-label {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.customer-info-value {
+  font-weight: 500;
+  color: #1f2937;
+}
+
+/* Pizza List */
+.pizza-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pizza-item {
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  background: white;
+  transition: all 0.2s;
+}
+
+.pizza-item:hover {
+  border-color: #fca5a5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pizza-item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 16px;
+}
+
+.pizza-item-details {
+  flex: 1;
+}
+
+.pizza-item-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.pizza-item-info {
+  color: #6b7280;
+  margin-bottom: 4px;
+  font-size: 15px;
+}
+
+.pizza-item-label {
+  font-weight: 500;
+}
+
+.pizza-item-price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #dc2626;
+  margin-top: 8px;
+}
+
+.pizza-item-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Order List */
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-item {
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: white;
+}
+
+.order-item:hover {
+  border-color: #fca5a5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.order-item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.order-item-info {
+  flex: 1;
+}
+
+.order-item-id {
+  font-weight: bold;
+  font-size: 18px;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.order-item-customer {
+  color: #6b7280;
+  margin-bottom: 2px;
+}
+
+.order-item-date {
+  font-size: 14px;
+  color: #9ca3af;
+  margin-bottom: 8px;
+}
+
+.order-item-pizzas {
+  color: #6b7280;
+  margin-top: 8px;
+}
+
+.order-item-total {
+  text-align: right;
+}
+
+.order-item-price {
+  font-size: 28px;
+  font-weight: bold;
+  color: #dc2626;
+}
+
+/* Total Display */
+.order-total {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 2px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-total-label {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.order-total-amount {
+  font-size: 36px;
+  font-weight: bold;
+  color: #dc2626;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.empty-state-icon {
+  width: 64px;
+  height: 64px;
+  color: #d1d5db;
+  margin: 0 auto 16px;
+}
+
+.empty-state-text {
+  color: #6b7280;
+  font-size: 18px;
+}
+
+/* Utility Classes */
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gap-8 {
+  gap: 8px;
+}
+
+.gap-12 {
+  gap: 12px;
+}
+
+.gap-16 {
+  gap: 16px;
+}
+
+.mt-8 {
+  margin-top: 8px;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.mt-24 {
+  margin-top: 24px;
+}
+
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .pizza-app-container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-title {
+    font-size: 36px;
+  }
+  
+  .app-subtitle {
+    font-size: 16px;
+  }
+  
+  .card {
+    padding: 16px;
+  }
+  
+  .card-title {
+    font-size: 24px;
+  }
+  
+  .pizza-item-content {
+    flex-direction: column;
+  }
+  
+  .pizza-item-actions {
+    width: 100%;
+  }
+  
+  .pizza-item-actions button {
+    flex: 1;
+  }
+}

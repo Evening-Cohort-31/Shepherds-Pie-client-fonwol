@@ -4,6 +4,7 @@ import { Navbar } from "./components/navbar/Navbar.jsx";
 import { Home } from "./components/home/Home.jsx";
 import { EmployeeList } from "./components/employees/EmployeeList.jsx";
 import { EmployeeDetails } from "./components/employees/EmployeeDetails.jsx";
+import PizzaOrderingApp from "./components/PizzaOrder/PizzaOrder.jsx";
 
 function App() {
   return (
@@ -23,7 +24,11 @@ function App() {
             <Route index element={<EmployeeList />} />
             <Route path=":employeeId" element={<EmployeeDetails />} />
             
+            
           </Route> 
+          <Route path="NewOrder">
+            <Route index element={<PizzaOrderingApp></PizzaOrderingApp>}></Route>
+          </Route>
         </Route>
       </Routes>
     </>
