@@ -45,16 +45,29 @@ export const Navbar = () => {
               sx={{ my: 2, color: "white", display: "block" }}
               onClick={() => navigate(page.url)}
             >
-              {page.text}
-            </Button>
-          ))}
-        </Box>
-        <Box sx={{ flexGrow: 0 }}>
-          <IconButton onClick={() => navigate("/")}> 
-            <Avatar />
-          </IconButton>
-        </Box>
-      </Toolbar>
-    </AppBar>
+              Shephard's Pie
+            </Typography>
+            <Box sx={{ flexGrow: 1, display: "flex" }}>
+              {pages.map((page) => (
+                <Button
+                  key={page}
+                  sx={{ my: 2, color: "white", display: "block" }}
+                  //Update as necessary
+                  onClick={() => navigate(`/${page}`)}
+                >
+                  {page}
+                </Button>
+              ))}
+            </Box>
+            <Box sx={{ flexGrow: 0 }}>
+              {/**Update to profile page */}
+              <IconButton onClick={() => navigate("/")}>
+                <Avatar />
+              </IconButton>
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>
+    </Box>
   );
 };
