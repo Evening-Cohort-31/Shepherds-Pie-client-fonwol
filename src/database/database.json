@@ -1,0 +1,99 @@
+{
+  "Orders": [
+    {
+      "id": 1,
+      "userId": 1,
+      "driverId": 1,
+      "tableId": 1,
+      "dateCreated": 1,
+      "customerName": "John",
+      "customerAddress": "text",
+      "phoneNumber": "900-897-1234",
+      "tip": 5,
+      "total": 20,
+      "status": "text"
+    }
+  ],
+  "Tables": [
+    {
+      "id": 1
+    }
+  ],
+  "PizzaOrder": [
+    {
+      "id": 1,
+      "orderId": 1,
+      "price": 20
+    }
+  ],
+  "Employees": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "address": "23 Electric Avenue Nashville, TN 37209",
+      "phoneNumber": "201-987-1234",
+      "email": "johndoe12@gmail.com",
+      "onClock": false,
+      "admin": false
+    },
+    {
+      "id": 2,
+      "name": "Sarah Martinez",
+      "address": "456 Oak Street Atlanta, GA 30301",
+      "phoneNumber": "404-234-5678",
+      "email": "sarah.martinez@gmail.com",
+      "onClock": false,
+      "admin": false
+    },
+    {
+      "id": 3,
+      "name": "Michael Johnson",
+      "address": "789 Maple Avenue Nashville, TN 37203",
+      "phoneNumber": "615-876-5432",
+      "email": "m.johnson87@gmail.com",
+      "onClock": true,
+      "admin": false
+    },
+    {
+      "id": 4,
+      "name": "Emily Charles",
+      "email": "emily.chen@gmail.com",
+      "phoneNumber": "212-555-0123",
+      "address": "1542 Broadway New York, NY 10036"
+    },
+    {
+      "id": 5,
+      "name": "David Williams",
+      "address": "67 Music Row Nashville, TN 37212",
+      "phoneNumber": "615-321-9876",
+      "email": "david.williams@gmail.com",
+      "onClock": false,
+      "admin": false
+    },
+    {
+      "id": 6,
+      "name": "Jessica Taylor",
+      "address": "890 Sunset Boulevard Los Angeles, CA 90028",
+      "phoneNumber": "323-444-7890",
+      "email": "jess.taylor92@gmail.com",
+      "onClock": true,
+      "admin": false
+    }
+  ],
+  "Options": [
+    {
+      "id": 1,
+      "name": "Peppers",
+      "price": 15,
+      "type": "text"
+    }
+  ],
+  "PizzaOptions": [
+    {
+      "id": 1,
+      "pizzaOrderId": 1,
+      "toppingId": 1,
+      "quantity": 1
+    }
+  ]
+}
