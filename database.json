@@ -1,0 +1,819 @@
+{
+    "employees": [
+        {
+            "id": 1,
+            "name": "Sarah Johnson",
+            "address": "123 Main St",
+            "phoneNumber": "555-0101",
+            "email": "sarah.j@shepherdspie.com",
+            "onClock": true,
+            "admin": true
+        },
+        {
+            "id": 2,
+            "name": "Mike Torres",
+            "address": "456 Oak Ave",
+            "phoneNumber": "555-0102",
+            "email": "mike.t@shepherdspie.com",
+            "onClock": true,
+            "admin": false
+        },
+        {
+            "id": 3,
+            "name": "Emma Davis",
+            "address": "789 Pine Rd",
+            "phoneNumber": "555-0103",
+            "email": "emma.d@shepherdspie.com",
+            "onClock": false,
+            "admin": false
+        },
+        {
+            "id": 4,
+            "name": "Carlos Martinez",
+            "address": "321 Elm St",
+            "phoneNumber": "555-0104",
+            "email": "carlos.m@shepherdspie.com",
+            "onClock": true,
+            "admin": false
+        }
+    ],
+    "tables": [
+        {
+            "id": 1
+        },
+        {
+            "id": 2
+        },
+        {
+            "id": 3
+        },
+        {
+            "id": 4
+        },
+        {
+            "id": 5
+        },
+        {
+            "id": 6
+        },
+        {
+            "id": 7
+        },
+        {
+            "id": 8
+        }
+    ],
+    "options": [
+        {
+            "id": 1,
+            "name": "Small",
+            "price": 8.99,
+            "type": "size"
+        },
+        {
+            "id": 2,
+            "name": "Medium",
+            "price": 12.99,
+            "type": "size"
+        },
+        {
+            "id": 3,
+            "name": "Large",
+            "price": 16.99,
+            "type": "size"
+        },
+        {
+            "id": 4,
+            "name": "Pepperoni",
+            "price": 1.50,
+            "type": "topping"
+        },
+        {
+            "id": 5,
+            "name": "Mushrooms",
+            "price": 1.00,
+            "type": "topping"
+        },
+        {
+            "id": 6,
+            "name": "Olives",
+            "price": 1.00,
+            "type": "topping"
+        },
+        {
+            "id": 7,
+            "name": "Sausage",
+            "price": 1.50,
+            "type": "topping"
+        },
+        {
+            "id": 8,
+            "name": "Bell Peppers",
+            "price": 1.00,
+            "type": "topping"
+        },
+        {
+            "id": 9,
+            "name": "Onions",
+            "price": 0.75,
+            "type": "topping"
+        },
+        {
+            "id": 10,
+            "name": "Extra Cheese",
+            "price": 2.00,
+            "type": "cheese"
+        },
+        {
+            "id": 19,
+            "name": "Mozzarella",
+            "price": 0.00,
+            "type": "cheese"
+        },
+        {
+            "id": 20,
+            "name": "Parmesan",
+            "price": 1.50,
+            "type": "cheese"
+        },
+        {
+            "id": 21,
+            "name": "Cheddar",
+            "price": 1.50,
+            "type": "cheese"
+        },
+        {
+            "id": 22,
+            "name": "Feta",
+            "price": 2.00,
+            "type": "cheese"
+        },
+        {
+            "id": 11,
+            "name": "Thin Crust",
+            "price": 0.00,
+            "type": "crust"
+        },
+        {
+            "id": 12,
+            "name": "Thick Crust",
+            "price": 1.50,
+            "type": "crust"
+        },
+        {
+            "id": 13,
+            "name": "Gluten Free",
+            "price": 3.00,
+            "type": "crust"
+        },
+        {
+            "id": 14,
+            "name": "Marinara",
+            "price": 0.00,
+            "type": "sauce"
+        },
+        {
+            "id": 15,
+            "name": "Alfredo",
+            "price": 1.50,
+            "type": "sauce"
+        },
+        {
+            "id": 16,
+            "name": "BBQ",
+            "price": 1.00,
+            "type": "sauce"
+        },
+        {
+            "id": 17,
+            "name": "Pesto",
+            "price": 1.50,
+            "type": "sauce"
+        },
+        {
+            "id": 18,
+            "name": "White Sauce",
+            "price": 1.00,
+            "type": "sauce"
+        }
+    ],
+    "orders": [
+        {
+            "id": 1,
+            "userId": 1,
+            "driverId": null,
+            "tableId": 3,
+            "dateCreated": "2025-11-01T18:30:00.000Z",
+            "customerName": "Alice Johnson",
+            "customerAddress": null,
+            "phoneNumber": "555-1234",
+            "tip": 5.00,
+            "total": 32.50,
+            "status": "complete"
+        },
+        {
+            "id": 2,
+            "userId": 1,
+            "driverId": 2,
+            "tableId": null,
+            "dateCreated": "2025-11-02T19:15:00.000Z",
+            "customerName": "Bob Smith",
+            "customerAddress": "456 Oak Ave",
+            "phoneNumber": "555-5678",
+            "tip": 3.50,
+            "total": 24.00,
+            "status": "out for delivery"
+        },
+        {
+            "id": 3,
+            "userId": 1,
+            "driverId": 4,
+            "tableId": null,
+            "dateCreated": "2025-11-03T20:00:00.000Z",
+            "customerName": "Carol Lee",
+            "customerAddress": "789 Pine Rd",
+            "phoneNumber": "555-9012",
+            "tip": 4.25,
+            "total": 28.75,
+            "status": "complete"
+        },
+        {
+            "id": 4,
+            "userId": 1,
+            "driverId": null,
+            "tableId": 5,
+            "dateCreated": "2025-11-04T17:45:00.000Z",
+            "customerName": "David Kim",
+            "customerAddress": null,
+            "phoneNumber": "555-3456",
+            "tip": 6.00,
+            "total": 40.00,
+            "status": "complete"
+        },
+        {
+            "id": 5,
+            "userId": 2,
+            "driverId": 4,
+            "tableId": null,
+            "dateCreated": "2025-10-30T21:10:00.000Z",
+            "customerName": "Eve Martinez",
+            "customerAddress": "654 Cedar Blvd",
+            "phoneNumber": "555-7890",
+            "tip": 2.75,
+            "total": 22.00,
+            "status": "complete"
+        },
+        {
+            "id": 6,
+            "userId": 2,
+            "driverId": null,
+            "tableId": 1,
+            "dateCreated": "2025-11-13T12:30:00.000Z",
+            "customerName": "Frank Wilson",
+            "customerAddress": null,
+            "phoneNumber": "555-2468",
+            "tip": null,
+            "total": 18.99,
+            "status": "in oven"
+        },
+        {
+            "id": 7,
+            "userId": 1,
+            "driverId": 2,
+            "tableId": null,
+            "dateCreated": "2025-11-13T13:00:00.000Z",
+            "customerName": "Grace Park",
+            "customerAddress": "987 Birch Ln",
+            "phoneNumber": "555-1357",
+            "tip": 5.00,
+            "total": 35.48,
+            "status": "placed"
+        },
+        {
+            "id": 8,
+            "userId": 1,
+            "driverId": null,
+            "tableId": 3,
+            "dateCreated": "2025-11-15T18:30:00.000Z",
+            "customerName": "Alice Johnson",
+            "customerAddress": null,
+            "phoneNumber": "555-1234",
+            "tip": 5.00,
+            "total": 32.50,
+            "status": "complete"
+        },
+        {
+            "id": 9,
+            "userId": 1,
+            "driverId": 2,
+            "tableId": null,
+            "dateCreated": "2025-11-16T19:15:00.000Z",
+            "customerName": "Bob Smith",
+            "customerAddress": "456 Oak Ave",
+            "phoneNumber": "555-5678",
+            "tip": 3.50,
+            "total": 24.00,
+            "status": "out for delivery"
+        },
+        {
+            "id": 10,
+            "userId": 1,
+            "driverId": 4,
+            "tableId": null,
+            "dateCreated": "2025-11-173T20:00:00.000Z",
+            "customerName": "Carol Lee",
+            "customerAddress": "789 Pine Rd",
+            "phoneNumber": "555-9012",
+            "tip": 4.25,
+            "total": 28.75,
+            "status": "complete"
+        },
+        {
+            "id": 11,
+            "userId": 1,
+            "driverId": null,
+            "tableId": 5,
+            "dateCreated": "2025-11-18T17:45:00.000Z",
+            "customerName": "David Kim",
+            "customerAddress": null,
+            "phoneNumber": "555-3456",
+            "tip": 6.00,
+            "total": 40.00,
+            "status": "complete"
+        },
+        {
+            "id": 12,
+            "userId": 2,
+            "driverId": 4,
+            "tableId": null,
+            "dateCreated": "2025-11-18T21:10:00.000Z",
+            "customerName": "Eve Martinez",
+            "customerAddress": "654 Cedar Blvd",
+            "phoneNumber": "555-7890",
+            "tip": 2.75,
+            "total": 22.00,
+            "status": "complete"
+        },
+        {
+            "id": 13,
+            "userId": 2,
+            "driverId": null,
+            "tableId": 1,
+            "dateCreated": "2025-11-13T12:30:00.000Z",
+            "customerName": "Frank Wilson",
+            "customerAddress": null,
+            "phoneNumber": "555-2468",
+            "tip": null,
+            "total": 18.99,
+            "status": "in oven"
+        },
+        {
+            "id": 14,
+            "userId": 1,
+            "driverId": 2,
+            "tableId": null,
+            "dateCreated": "2025-11-13T13:00:00.000Z",
+            "customerName": "Grace Park",
+            "customerAddress": "987 Birch Ln",
+            "phoneNumber": "555-1357",
+            "tip": 5.00,
+            "total": 35.48,
+            "status": "placed"
+        }
+    ],
+    "pizzaOrders": [
+        {
+            "id": 1,
+            "orderId": 1,
+            "price": 16.99
+        },
+        {
+            "id": 2,
+            "orderId": 1,
+            "price": 15.49
+        },
+        {
+            "id": 3,
+            "orderId": 2,
+            "price": 12.99
+        },
+        {
+            "id": 4,
+            "orderId": 2,
+            "price": 11.00
+        },
+        {
+            "id": 5,
+            "orderId": 3,
+            "price": 14.49
+        },
+        {
+            "id": 6,
+            "orderId": 3,
+            "price": 14.25
+        },
+        {
+            "id": 7,
+            "orderId": 4,
+            "price": 20.99
+        },
+        {
+            "id": 8,
+            "orderId": 4,
+            "price": 19.00
+        },
+        {
+            "id": 9,
+            "orderId": 5,
+            "price": 11.99
+        },
+        {
+            "id": 10,
+            "orderId": 5,
+            "price": 10.00
+        },
+        {
+            "id": 11,
+            "orderId": 6,
+            "price": 18.99
+        },
+        {
+            "id": 12,
+            "orderId": 7,
+            "price": 17.49
+        },
+        {
+            "id": 13,
+            "orderId": 7,
+            "price": 17.99
+        }
+    ],
+    "pizzaOptions": [
+        {
+            "id": 1,
+            "pizzaOrderId": 1,
+            "toppingId": 3,
+            "quantity": 1
+        },
+        {
+            "id": 2,
+            "pizzaOrderId": 1,
+            "toppingId": 4,
+            "quantity": 1
+        },
+        {
+            "id": 3,
+            "pizzaOrderId": 2,
+            "toppingId": 2,
+            "quantity": 1
+        },
+        {
+            "id": 4,
+            "pizzaOrderId": 2,
+            "toppingId": 5,
+            "quantity": 1
+        },
+        {
+            "id": 5,
+            "pizzaOrderId": 2,
+            "toppingId": 8,
+            "quantity": 1
+        },
+        {
+            "id": 6,
+            "pizzaOrderId": 3,
+            "toppingId": 2,
+            "quantity": 1
+        },
+        {
+            "id": 7,
+            "pizzaOrderId": 3,
+            "toppingId": 4,
+            "quantity": 2
+        },
+        {
+            "id": 8,
+            "pizzaOrderId": 4,
+            "toppingId": 1,
+            "quantity": 1
+        },
+        {
+            "id": 9,
+            "pizzaOrderId": 4,
+            "toppingId": 5,
+            "quantity": 1
+        },
+        {
+            "id": 10,
+            "pizzaOrderId": 5,
+            "toppingId": 2,
+            "quantity": 1
+        },
+        {
+            "id": 11,
+            "pizzaOrderId": 5,
+            "toppingId": 4,
+            "quantity": 1
+        },
+        {
+            "id": 12,
+            "pizzaOrderId": 5,
+            "toppingId": 11,
+            "quantity": 1
+        },
+        {
+            "id": 13,
+            "pizzaOrderId": 6,
+            "toppingId": 2,
+            "quantity": 1
+        },
+        {
+            "id": 14,
+            "pizzaOrderId": 6,
+            "toppingId": 7,
+            "quantity": 1
+        },
+        {
+            "id": 15,
+            "pizzaOrderId": 6,
+            "toppingId": 9,
+            "quantity": 1
+        },
+        {
+            "id": 16,
+            "pizzaOrderId": 7,
+            "toppingId": 3,
+            "quantity": 1
+        },
+        {
+            "id": 17,
+            "pizzaOrderId": 7,
+            "toppingId": 4,
+            "quantity": 2
+        },
+        {
+            "id": 18,
+            "pizzaOrderId": 7,
+            "toppingId": 10,
+            "quantity": 1
+        },
+        {
+            "id": 19,
+            "pizzaOrderId": 8,
+            "toppingId": 3,
+            "quantity": 1
+        },
+        {
+            "id": 20,
+            "pizzaOrderId": 8,
+            "toppingId": 5,
+            "quantity": 1
+        },
+        {
+            "id": 21,
+            "pizzaOrderId": 8,
+            "toppingId": 6,
+            "quantity": 1
+        },
+        {
+            "id": 22,
+            "pizzaOrderId": 9,
+            "toppingId": 2,
+            "quantity": 1
+        },
+        {
+            "id": 23,
+            "pizzaOrderId": 9,
+            "toppingId": 9,
+            "quantity": 1
+        },
+        {
+            "id": 24,
+            "pizzaOrderId": 10,
+            "toppingId": 1,
+            "quantity": 1
+        },
+        {
+            "id": 25,
+            "pizzaOrderId": 10,
+            "toppingId": 4,
+            "quantity": 1
+        },
+        {
+            "id": 26,
+            "pizzaOrderId": 11,
+            "toppingId": 3,
+            "quantity": 1
+        },
+        {
+            "id": 27,
+            "pizzaOrderId": 11,
+            "toppingId": 13,
+            "quantity": 1
+        },
+        {
+            "id": 28,
+            "pizzaOrderId": 11,
+            "toppingId": 5,
+            "quantity": 1
+        },
+        {
+            "id": 29,
+            "pizzaOrderId": 11,
+            "toppingId": 10,
+            "quantity": 1
+        },
+        {
+            "id": 30,
+            "pizzaOrderId": 12,
+            "toppingId": 2,
+            "quantity": 1
+        },
+        {
+            "id": 31,
+            "pizzaOrderId": 12,
+            "toppingId": 12,
+            "quantity": 1
+        },
+        {
+            "id": 32,
+            "pizzaOrderId": 12,
+            "toppingId": 7,
+            "quantity": 1
+        },
+        {
+            "id": 33,
+            "pizzaOrderId": 13,
+            "toppingId": 3,
+            "quantity": 1
+        },
+        {
+            "id": 34,
+            "pizzaOrderId": 13,
+            "toppingId": 4,
+            "quantity": 1
+        },
+        {
+            "id": 35,
+            "pizzaOrderId": 13,
+            "toppingId": 11,
+            "quantity": 1
+        },
+        {
+            "id": 36,
+            "pizzaOrderId": 1,
+            "toppingId": 14,
+            "quantity": 1
+        },
+        {
+            "id": 37,
+            "pizzaOrderId": 2,
+            "toppingId": 15,
+            "quantity": 1
+        },
+        {
+            "id": 38,
+            "pizzaOrderId": 3,
+            "toppingId": 14,
+            "quantity": 1
+        },
+        {
+            "id": 39,
+            "pizzaOrderId": 4,
+            "toppingId": 14,
+            "quantity": 1
+        },
+        {
+            "id": 40,
+            "pizzaOrderId": 5,
+            "toppingId": 14,
+            "quantity": 1
+        },
+        {
+            "id": 41,
+            "pizzaOrderId": 6,
+            "toppingId": 16,
+            "quantity": 1
+        },
+        {
+            "id": 42,
+            "pizzaOrderId": 7,
+            "toppingId": 14,
+            "quantity": 1
+        },
+        {
+            "id": 43,
+            "pizzaOrderId": 8,
+            "toppingId": 18,
+            "quantity": 1
+        },
+        {
+            "id": 44,
+            "pizzaOrderId": 9,
+            "toppingId": 14,
+            "quantity": 1
+        },
+        {
+            "id": 45,
+            "pizzaOrderId": 10,
+            "toppingId": 14,
+            "quantity": 1
+        },
+        {
+            "id": 46,
+            "pizzaOrderId": 11,
+            "toppingId": 17,
+            "quantity": 1
+        },
+        {
+            "id": 47,
+            "pizzaOrderId": 12,
+            "toppingId": 16,
+            "quantity": 1
+        },
+        {
+            "id": 48,
+            "pizzaOrderId": 13,
+            "toppingId": 14,
+            "quantity": 1
+        },
+        {
+            "id": 49,
+            "pizzaOrderId": 1,
+            "toppingId": 19,
+            "quantity": 1
+        },
+        {
+            "id": 50,
+            "pizzaOrderId": 2,
+            "toppingId": 19,
+            "quantity": 1
+        },
+        {
+            "id": 51,
+            "pizzaOrderId": 3,
+            "toppingId": 19,
+            "quantity": 1
+        },
+        {
+            "id": 52,
+            "pizzaOrderId": 4,
+            "toppingId": 19,
+            "quantity": 1
+        },
+        {
+            "id": 53,
+            "pizzaOrderId": 5,
+            "toppingId": 19,
+            "quantity": 1
+        },
+        {
+            "id": 54,
+            "pizzaOrderId": 6,
+            "toppingId": 21,
+            "quantity": 1
+        },
+        {
+            "id": 55,
+            "pizzaOrderId": 7,
+            "toppingId": 19,
+            "quantity": 1
+        },
+        {
+            "id": 56,
+            "pizzaOrderId": 8,
+            "toppingId": 22,
+            "quantity": 1
+        },
+        {
+            "id": 57,
+            "pizzaOrderId": 9,
+            "toppingId": 19,
+            "quantity": 1
+        },
+        {
+            "id": 58,
+            "pizzaOrderId": 10,
+            "toppingId": 19,
+            "quantity": 1
+        },
+        {
+            "id": 59,
+            "pizzaOrderId": 11,
+            "toppingId": 20,
+            "quantity": 1
+        },
+        {
+            "id": 60,
+            "pizzaOrderId": 12,
+            "toppingId": 21,
+            "quantity": 1
+        },
+        {
+            "id": 61,
+            "pizzaOrderId": 13,
+            "toppingId": 19,
+            "quantity": 1
+        }
+    ]
+}
