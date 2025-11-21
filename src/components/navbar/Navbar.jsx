@@ -19,55 +19,41 @@ export const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <AppBar position="static" sx={{ width: "100vw" }}>
-      <Toolbar>
-        <Typography
-          variant="h6"
-          noWrap
-          component="a"
-          href="/"
-          sx={{
-            mr: 2,
-            display: "flex",
-            fontFamily: "monospace",
-            fontWeight: 700,
-            letterSpacing: ".1rem",
-            color: "inherit",
-            textDecoration: "none",
-          }}
-        >
-          Shepherd's Pie
-        </Typography>
-        <Box sx={{ flexGrow: 1, display: "flex" }}>
-          {pages.map((page) => (
-            <Button
-              key={page.text}
-              sx={{ my: 2, color: "white", display: "block" }}
-              onClick={() => navigate(page.url)}
+      <AppBar position="static" sx={{ width: "100vw" }}>
+          <Toolbar>
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href="/"
+              sx={{
+                mr: 2,
+                display: "flex",
+                fontFamily: "monospace",
+                fontWeight: 700,
+                letterSpacing: ".1rem",
+                color: "inherit",
+                textDecoration: "none",
+              }}
             >
-              Shephard's Pie
+              Shepherd's Pie
             </Typography>
             <Box sx={{ flexGrow: 1, display: "flex" }}>
               {pages.map((page) => (
                 <Button
-                  key={page}
+                  key={page.text}
                   sx={{ my: 2, color: "white", display: "block" }}
-                  //Update as necessary
-                  onClick={() => navigate(`/${page}`)}
-                >
-                  {page}
-                </Button>
-              ))}
-            </Box>
-            <Box sx={{ flexGrow: 0 }}>
-              {/**Update to profile page */}
-              <IconButton onClick={() => navigate("/")}>
-                <Avatar />
-              </IconButton>
+                  onClick={() => navigate(page.url)}
+                >{page.text}
+                </Button>))}
+              </Box>
+                <Box sx={{ flexGrow: 0 }}>
+                  {/**Update to profile page */}
+                  <IconButton onClick={() => navigate("/")}>
+                    <Avatar />
+                  </IconButton>          
             </Box>
           </Toolbar>
-        </Container>
       </AppBar>
-    </Box>
   );
 };
